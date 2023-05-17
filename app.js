@@ -79,13 +79,13 @@ console.log(
 
 async function postByUser(userId) {
   const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
-// We are getting the promise from the fetch API
+  // We are getting the promise from the fetch API
   const result = await promise.json();
-// We are converting the backend to frontend (convert to json)
-  const posts = result.filter(element => element.userId === userId);
-// We have the result. Now we use the filter method.
-// The filter looks through every element in our current iteration if 
-// the userId === the Id entered in, it will return true
+  // We are converting the backend to frontend (convert to json)
+  const posts = result.filter((element) => element.userId === userId);
+  // We have the result. Now we use the filter method.
+  // The filter looks through every element in our current iteration if
+  // the userId === the Id entered in, it will return true
   console.log(posts);
 }
 
@@ -95,13 +95,13 @@ postByUser(4);
 
 // First 6 Incomplete Todos
 async function firstSixIncomplete(userId) {
-    const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
 
-    const result = await promise.json();
+  const result = await promise.json();
 
-    const incompleteTasks = result.filter(elem => !elem.comepleted).slice(0, 6);
+  const incompleteTasks = result.filter((elem) => !elem.comepleted).slice(0, 6);
 
-    console.log(incompleteTasks);
+  console.log(incompleteTasks);
 }
 
-firstSixIncomplete(6)
+firstSixIncomplete(6);
